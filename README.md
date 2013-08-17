@@ -1,7 +1,7 @@
 AmoebaTwo
 =========
 
-Code for Amoeba Two
+Core control library for AmoebaTwo
 
 Requires Python 3
 

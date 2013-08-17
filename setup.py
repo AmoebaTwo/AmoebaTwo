@@ -2,13 +2,13 @@
 from distutils.core import setup
 
 setup(
-    name='moeba_two',
+    name='AmoebaTwo',
     version='0.1',
-    description='Amoeba 2 core control lib',
+    description='AmoebaTwo core control lib',
     author='Chris Alexander',
     author_email='chris@chris-alexander.co.uk',
     license='MIT',
-    url='https://github.com/chrisalexander/amoeba_two',
+    url='https://github.com/chrisalexander/AmoebaTwo',
     py_modules=['amoebatwo'],
     requires=['pifacedigitalio'],
 )
