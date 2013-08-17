@@ -9,6 +9,9 @@ To install:
 
     python3 setup.py install
 
+Depends upon:
+
+- [PiFace](https://github.com/thomasmacpherson/piface)
 
 To use:
 
