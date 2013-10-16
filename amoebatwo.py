@@ -18,8 +18,8 @@ class Lights:
 
 	def __init__(self, b):
 		self.board = b;
-		self.front = Light(self.board, 2);
-		self.top = Light(self.board, 3);
+		self.front = Light(self.board, 3);
+		self.top = Light(self.board, 2);
 
 	def blackout(self):
 		self.front.off();
