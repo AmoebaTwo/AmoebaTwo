@@ -11,7 +11,7 @@ To install:
 
 Depends upon:
 
-- [PiFace](https://github.com/thomasmacpherson/piface)
+- [PiFace](https://github.com/piface)
 
 To use:
 
