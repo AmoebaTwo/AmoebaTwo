@@ -50,6 +50,25 @@ class Move:
 		self.board.output_pins[0].turn_on();
 		self.board.output_pins[1].turn_off();
 
+class InputListener:
+
+	def __init__(self, b):
+		self.board = b;
+		self.listener = pifacedigitalio.InputEventListener(chip=self.board);
+		self.inited = False;
+
+	def register(self, port, fn):
+		if self.inited:
+			return;
+		self.inited = True;
+		self.listener.register(port, pifacedigitalio.IODIR_FALLING_EDGE, fn);
+		self.listener.activate();
+
+	def unregister(self):
+		if not self.inited:
+			return;
+		self.inited = False;
+		self.listener.deactivate();
 
 class AmoebaTwo:
 	
@@ -59,6 +78,8 @@ class AmoebaTwo:
 		self.lights = Lights(self.board);
 		self.move = Move(self.board);
 
-	def __del__(self):
-		pifacedigitalio.deinit();
-	
+	def registerListener(self, port, fn):
+		listener = InputListener(self.board);
+		listener.register(port, fn);
+		return listener;		
+
